@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Organization &amp; Agenda – CoreSense General Meeting</title>
+  <meta name="description" content="Attendees list, two-day agenda, and meals/dietary requirements for the CoreSense General Meeting at URJC Aranjuez." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0d2137" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ====================================================
+     HEADER
+     ==================================================== -->
+<header>
+  <div class="header-inner">
+    <div class="header-logos">
+      <img src="img/CoreSense-Logo.png"
+           alt="CoreSense – Horizon Europe" />
+      <img src="img/Logo-URJC.svg"
+           alt="Universidad Rey Juan Carlos"
+           style="max-height:52px; filter:brightness(0) invert(1);" />
+    </div>
+    <div class="header-event">
+      <strong>CoreSense General Meeting</strong><br />
+      URJC Campus de Aranjuez · Madrid, Spain
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="organization.html" class="active">Organization &amp; Agenda</a>
+      <a href="venue.html">Venue &amp; Social Activities</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ====================================================
+     PAGE BANNER
+     ==================================================== -->
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Organization &amp; Agenda</div>
+    <h1>Organization &amp; Agenda</h1>
+    <p>Attendees, two-day programme, and meal preferences for the CoreSense General Meeting.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ====================================================
+       HOW TO CONTRIBUTE VIA PULL REQUEST
+       ==================================================== -->
+  <section>
+    <h2>Contributing via Pull Request</h2>
+    <div class="infobox">
+      <strong>How to update the tables on this page:</strong><br />
+      This page is maintained as plain HTML in the project repository. To add or update
+      your information (attendance, dietary needs):
+      <ol style="margin:0.6rem 0 0 1.2rem; padding:0;">
+        <li>Fork or branch the repository.</li>
+        <li>Edit <code>organization.html</code> – find the relevant <code>&lt;tbody&gt;</code> section.</li>
+        <li>Copy an existing <code>&lt;tr&gt;…&lt;/tr&gt;</code> row and fill in your details.</li>
+        <li>Submit a Pull Request with a short description (e.g. "Add Jane Doe – TU Delft").</li>
+      </ol>
+      Each table has a comment block immediately above the <code>&lt;tbody&gt;</code>
+      explaining what each column means.
+    </div>
+  </section>
+
+  <!-- ====================================================
+       ATTENDEES
+       ==================================================== -->
+  <section id="attendees">
+    <h2>Attendees</h2>
+    <p>
+      All consortium members attending the General Meeting.
+      To add yourself, submit a Pull Request editing the table below.
+    </p>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    ATTENDEES TABLE – HOW TO EDIT VIA PULL REQUEST
+    ───────────────────────────────────────────────────────────────
+    To register your attendance, add a new <tr> row inside <tbody>.
+    Copy the example row pattern below and fill in your details:
+
+    <tr>
+      <td>Your Full Name</td>
+      <td>Your Institution (acronym)</td>
+      <td>Your Country</td>
+      <td>your@email.example</td>
+      <td>Yes / No / TBC</td>    ← attending Day 1
+      <td>Yes / No / TBC</td>    ← attending Day 2
+      <td>Free text notes</td>
+    </tr>
+
+    Columns: Name | Institution | Country | Email | Day 1 | Day 2 | Notes
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <table class="attendees">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Institution</th>
+          <th>Country</th>
+          <th>E-mail</th>
+          <th>Day 1</th>
+          <th>Day 2</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ── UPM ────────────────────────────────────────────── -->
+        <tr>
+          <td>Ricardo Sanz</td>
+          <td>UPM</td>
+          <td>Spain</td>
+          <td>ricardo.sanz@upm.es</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Project Coordinator</td>
+        </tr>
+        <!-- ── URJC ───────────────────────────────────────────── -->
+        <tr>
+          <td>Francisco Martín Rico</td>
+          <td>URJC</td>
+          <td>Spain</td>
+          <td>francisco.rico@urjc.es</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Local organizer</td>
+        </tr>
+        <!-- ── TU Delft ──────────────────────────────────────── -->
+        <!-- ADD NEW ATTENDEE – copy the <tr> block below and fill in -->
+        <!--
+        <tr>
+          <td>Full Name</td>
+          <td>TU Delft</td>
+          <td>Netherlands</td>
+          <td>name@tudelft.nl</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        -->
+        <!-- ── Fraunhofer IPA ──────────────────────────────────── -->
+        <!-- ADD NEW ATTENDEE – copy the <tr> block below and fill in -->
+        <!--
+        <tr>
+          <td>Full Name</td>
+          <td>Fraunhofer IPA</td>
+          <td>Germany</td>
+          <td>name@ipa.fraunhofer.de</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        -->
+        <!-- ── PAL Robotics ───────────────────────────────────── -->
+        <!--
+        <tr>
+          <td>Full Name</td>
+          <td>PAL Robotics</td>
+          <td>Spain</td>
+          <td>name@pal-robotics.com</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        -->
+        <!-- ── IMR ────────────────────────────────────────────── -->
+        <!--
+        <tr>
+          <td>Full Name</td>
+          <td>IMR</td>
+          <td>Ireland</td>
+          <td>name@imr.ie</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        -->
+        <!-- ── CTU Prague ─────────────────────────────────────── -->
+        <!--
+        <tr>
+          <td>Full Name</td>
+          <td>CTU Prague</td>
+          <td>Czech Republic</td>
+          <td>name@cvut.cz</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ====================================================
+       AGENDA – DAY 1
+       ==================================================== -->
+  <section id="agenda">
+    <h2>Programme</h2>
+    <p>
+      The agenda below is an initial draft. Times are indicative and may be adjusted.
+      Each session is identified by its responsible person/WP and a descriptive title.
+    </p>
+
+    <div class="infobox warning">
+      <strong>Note for WP leaders:</strong> please confirm your slot and send slides
+      to the local organizer at least 48 hours before the meeting.
+    </div>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    AGENDA TABLE – HOW TO EDIT VIA PULL REQUEST
+    ───────────────────────────────────────────────────────────────
+    To update a session, find the corresponding <tr> in the <tbody>
+    and edit the <td> cells.
+    To add a new session, insert a new <tr> at the appropriate position.
+
+    Row types (set via class on <tr>):
+      • (no class)         → regular session row
+      • class="break"      → coffee / lunch break row
+      • class="day-header" → day separator row (full-width cell, colspan="4")
+
+    Columns: Time | Responsible | Session Title | Notes
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Responsible</th>
+          <th>Session</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- ─────────────── DAY 1 ─────────────────────────── -->
+        <tr class="day-header">
+          <td colspan="4">Day 1 – Thursday, 28 May 2026</td>
+        </tr>
+
+        <tr>
+          <td class="time">09:00</td>
+          <td class="responsible">All</td>
+          <td>Welcome coffee and registration</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="time">09:30</td>
+          <td class="responsible">Ricardo Sanz (UPM)<br />Francisco Martín (URJC)</td>
+          <td>Opening – Project status overview and meeting objectives</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td class="time">10:00</td>
+          <td class="responsible">WP1 Lead (UPM)</td>
+          <td>WP1 Update: Understanding and Awareness Theory</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">10:30</td>
+          <td class="responsible">WP2 Lead (UPM)</td>
+          <td>WP2 Update: Awareness Architecture</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr class="break">
+          <td class="time">11:00</td>
+          <td class="responsible">—</td>
+          <td>☕ Coffee break</td>
+          <td>20 min</td>
+        </tr>
+        <tr>
+          <td class="time">11:20</td>
+          <td class="responsible">WP3 Lead</td>
+          <td>WP3 Update: Cognitive Modules and Structures</td>
+          <td>40 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">12:00</td>
+          <td class="responsible">WP4 Lead</td>
+          <td>WP4 Update: System Lifecycle and Toolchain</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">12:30</td>
+          <td class="responsible">WP5 Lead (URJC)</td>
+          <td>WP5 Update: ROSification of Software Assets</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr class="break">
+          <td class="time">13:00</td>
+          <td class="responsible">—</td>
+          <td>🍽 Lunch</td>
+          <td>90 min</td>
+        </tr>
+        <tr>
+          <td class="time">14:30</td>
+          <td class="responsible">WP6 Lead (Fraunhofer IPA / IMR)</td>
+          <td>WP6 Update: Testbed – Manufacturing Robots</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">15:00</td>
+          <td class="responsible">WP7 Lead (TU Delft / CTU Prague)</td>
+          <td>WP7 Update: Testbed – Inspection Drones</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">15:30</td>
+          <td class="responsible">WP8 Lead (PAL Robotics / URJC / UPM)</td>
+          <td>WP8 Update: Testbed – Social Robots</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr class="break">
+          <td class="time">16:00</td>
+          <td class="responsible">—</td>
+          <td>☕ Coffee break</td>
+          <td>20 min</td>
+        </tr>
+        <tr>
+          <td class="time">16:20</td>
+          <td class="responsible">WP9 Lead (IMR)</td>
+          <td>WP9 Update: Dissemination, Exploitation and Communication</td>
+          <td>30 min + Q&amp;A</td>
+        </tr>
+        <tr>
+          <td class="time">16:50</td>
+          <td class="responsible">All partners</td>
+          <td>Open discussion: Cross-WP integration challenges</td>
+          <td>40 min</td>
+        </tr>
+        <tr class="break">
+          <td class="time">17:30</td>
+          <td class="responsible">—</td>
+          <td>End of Day 1 sessions</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="time">20:00</td>
+          <td class="responsible">All</td>
+          <td>🍷 Social dinner – venue TBD</td>
+          <td>Optional</td>
+        </tr>
+
+        <!-- ─────────────── DAY 2 ─────────────────────────── -->
+        <tr class="day-header">
+          <td colspan="4">Day 2 – Friday, 29 May 2026</td>
+        </tr>
+
+        <tr>
+          <td class="time">09:00</td>
+          <td class="responsible">Ricardo Sanz (UPM)</td>
+          <td>Day 2 opening – recap and agenda</td>
+          <td>15 min</td>
+        </tr>
+        <tr>
+          <td class="time">09:15</td>
+          <td class="responsible">All partners</td>
+          <td>Technical session: Integration and interoperability across WPs</td>
+          <td>60 min</td>
+        </tr>
+        <tr>
+          <td class="time">10:15</td>
+          <td class="responsible">URJC team</td>
+          <td>Robot demonstrations at URJC Social Robots Lab</td>
+          <td>45 min</td>
+        </tr>
+        <tr class="break">
+          <td class="time">11:00</td>
+          <td class="responsible">—</td>
+          <td>☕ Coffee break</td>
+          <td>20 min</td>
+        </tr>
+        <tr>
+          <td class="time">11:20</td>
+          <td class="responsible">All partners</td>
+          <td>Discussion: Next milestones, deliverables and risk review</td>
+          <td>60 min</td>
+        </tr>
+        <tr>
+          <td class="time">12:20</td>
+          <td class="responsible">All partners</td>
+          <td>Exploitation roadmap and IPR discussion</td>
+          <td>40 min</td>
+        </tr>
+        <tr class="break">
+          <td class="time">13:00</td>
+          <td class="responsible">—</td>
+          <td>🍽 Lunch</td>
+          <td>90 min</td>
+        </tr>
+        <tr>
+          <td class="time">14:30</td>
+          <td class="responsible">All</td>
+          <td>🏛 Social activity: Guided visit to Palacio Real de Aranjuez</td>
+          <td>See <a href="venue.html#social-activity">venue page</a></td>
+        </tr>
+        <tr>
+          <td class="time">17:00</td>
+          <td class="responsible">All partners</td>
+          <td>Workshop: Future directions and strategic planning</td>
+          <td>60 min</td>
+        </tr>
+        <tr>
+          <td class="time">18:00</td>
+          <td class="responsible">Ricardo Sanz (UPM)</td>
+          <td>Closing remarks and action items</td>
+          <td>30 min</td>
+        </tr>
+        <tr class="break">
+          <td class="time">18:30</td>
+          <td class="responsible">—</td>
+          <td>End of General Meeting</td>
+          <td></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ====================================================
+       MEALS & DIETARY REQUIREMENTS
+       ==================================================== -->
+  <section id="meals">
+    <h2>Meals &amp; Dietary Requirements</h2>
+    <p>
+      The following table collects dietary restrictions and allergies for all
+      catered meals during the meeting. Please fill in your information via Pull
+      Request so the local organizer can inform the catering provider in advance.
+    </p>
+    <p>
+      Catered meals:
+      <strong>Day 1 – Lunch</strong> ·
+      <strong>Day 1 – Dinner</strong> ·
+      <strong>Day 2 – Lunch</strong>
+    </p>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    MEALS / DIETARY TABLE – HOW TO EDIT VIA PULL REQUEST
+    ───────────────────────────────────────────────────────────────
+    Fill in your row below. One row per person.
+    Use "None" if you have no dietary requirements.
+    For multiple restrictions, separate them with commas.
+
+    Common values for "Dietary type":
+      Omnivore | Vegetarian | Vegan | Halal | Kosher | Other
+
+    Common values for "Allergies / intolerances":
+      None | Gluten | Lactose | Nuts | Shellfish | Eggs | Soy | Other
+
+    Columns:
+      Name           – your full name (must match the Attendees table)
+      Institution    – your partner institution acronym
+      Dietary type   – your general dietary preference
+      Allergies      – specific allergies or intolerances (comma-separated)
+      Day 1 Lunch    – attending? (Yes / No)
+      Day 1 Dinner   – attending? (Yes / No)
+      Day 2 Lunch    – attending? (Yes / No)
+      Notes          – any additional information for catering
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <table class="meals">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Institution</th>
+          <th>Dietary type</th>
+          <th>Allergies / intolerances</th>
+          <th>Day 1 Lunch</th>
+          <th>Day 1 Dinner</th>
+          <th>Day 2 Lunch</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ─────────────────────────────────────────────────────
+             TO ADD YOUR ROW: copy the <tr> block below, uncomment it,
+             and fill in your details. Then submit a Pull Request.
+             ───────────────────────────────────────────────────── -->
+
+        <tr>
+          <td>Ricardo Sanz</td>
+          <td>UPM</td>
+          <td>Omnivore</td>
+          <td>None</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Francisco Martín Rico</td>
+          <td>URJC</td>
+          <td>Omnivore</td>
+          <td>None</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td></td>
+        </tr>
+
+        <!-- COPY THIS BLOCK FOR EACH NEW PARTICIPANT:
+        <tr>
+          <td>Full Name</td>
+          <td>Institution</td>
+          <td>Omnivore / Vegetarian / Vegan / Halal / Kosher / Other</td>
+          <td>None / Gluten / Lactose / Nuts / Shellfish / …</td>
+          <td>Yes / No</td>
+          <td>Yes / No</td>
+          <td>Yes / No</td>
+          <td></td>
+        </tr>
+        -->
+
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- ====================================================
+     FOOTER
+     ==================================================== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p><strong style="color:#fff;">CoreSense General Meeting</strong></p>
+      <p>Universidad Rey Juan Carlos – Campus de Aranjuez, Madrid, Spain</p>
+      <p style="margin-top:0.75rem;">
+        CoreSense has received funding from the European Union's Horizon Europe
+        research and innovation programme under grant agreement No. 101070254.
+      </p>
+      <p>
+        <a href="https://coresense.eu/" target="_blank" rel="noopener">coresense.eu</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.urjc.es/" target="_blank" rel="noopener">urjc.es</a>
+      </p>
+    </div>
+    <div class="footer-logos">
+      <img src="https://coresense.eu/wp-content/uploads/2024/02/EU-Project-Funding-Text-New.png"
+           alt="EU Horizon Europe funding logo"
+           style="filter:none; opacity:0.9; max-height:56px;"
+           onerror="this.style.display='none'" />
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

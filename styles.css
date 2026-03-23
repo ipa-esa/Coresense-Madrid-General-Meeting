@@ -1,0 +1,556 @@
+/* ============================================================
+   CoreSense General Meeting – Madrid | Shared Styles
+   Colors inspired by https://coresense.eu/ branding
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --- CoreSense brand palette --- */
+  --primary:   #0d2137;   /* deep navy – main brand blue */
+  --secondary: #00977c;   /* teal green – CoreSense accent */
+  --orange:    #ef7d28;   /* warm orange – Horizon Europe highlight */
+  --eu-blue:   #003399;   /* EU flag blue */
+
+  /* --- Layout & typography --- */
+  --bg:        #f3f6fb;
+  --text:      #0f172a;
+  --muted:     #64748b;
+  --card:      #ffffff;
+  --border:    #dde3ee;
+  --shadow:    0 4px 24px rgba(13, 33, 55, 0.10);
+  --radius:    10px;
+  --maxw:      1100px;
+}
+
+/* ---- Reset / base ---------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system,
+               'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--secondary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---- Buttons --------------------------------------------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow);
+  transition: filter 0.15s;
+}
+.button:hover  { text-decoration: none; filter: brightness(0.9); }
+.button.outline {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  box-shadow: none;
+}
+.button.outline:hover { background: var(--secondary); color: #fff; }
+
+/* ---- Header ---------------------------------------------- */
+header {
+  background: var(--primary);
+  color: #fff;
+  border-bottom: 3px solid var(--secondary);
+}
+
+.header-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.header-logos img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-event {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  text-align: right;
+  line-height: 1.4;
+}
+.header-event strong { color: #fff; font-size: 0.95rem; }
+
+/* ---- Navigation ------------------------------------------ */
+nav {
+  background: rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.nav-inner a {
+  color: rgba(255,255,255,0.80);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.7rem 1.1rem;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-inner a:hover,
+.nav-inner a.active {
+  color: #fff;
+  border-bottom-color: var(--secondary);
+}
+
+/* ---- Main wrapper ---------------------------------------- */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+/* ---- Hero ------------------------------------------------ */
+.hero {
+  padding: 3rem 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.hero h1 span.accent { color: var(--secondary); }
+
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.hero-actions { margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-card h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  margin: 0 0 0.9rem 0;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-card li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.95rem;
+}
+.hero-card li:last-child { border-bottom: none; }
+.hero-card strong { color: var(--primary); }
+
+/* ---- Sections -------------------------------------------- */
+section {
+  padding: 2.5rem 1.5rem;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+section h2 {
+  font-size: 1.55rem;
+  margin: 0 0 0.8rem 0;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+
+section h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin: 1.4rem 0 0.5rem 0;
+}
+
+section p {
+  margin: 0 0 0.9rem 0;
+  color: var(--text);
+  max-width: 80ch;
+}
+
+/* ---- Card grid ------------------------------------------- */
+.grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--secondary);
+  font-size: 1.05rem;
+}
+
+.card p { margin: 0.3rem 0; color: #374151; font-size: 0.95rem; }
+
+/* ---- Info box -------------------------------------------- */
+.infobox {
+  background: rgba(0, 151, 124, 0.07);
+  border: 1px solid rgba(0, 151, 124, 0.3);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  margin: 1.2rem 0;
+  font-size: 0.97rem;
+}
+
+.infobox.warning {
+  background: rgba(239, 125, 40, 0.07);
+  border-color: rgba(239, 125, 40, 0.3);
+  border-left-color: var(--orange);
+}
+
+/* ---- Schedule / agenda table ----------------------------- */
+/*
+ * EDITING THIS TABLE VIA PULL REQUEST:
+ * Each row is one session. Copy a <tr> block and fill in your details.
+ * Columns: Time | Responsible | Session Title | Notes
+ */
+table.schedule {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+table.schedule th,
+table.schedule td {
+  padding: 0.8rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+table.schedule tr:last-child td { border-bottom: none; }
+
+table.schedule thead tr {
+  background: var(--primary);
+  color: #fff;
+}
+
+table.schedule thead th { font-weight: 600; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.9);}
+
+table.schedule td.time {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--secondary);
+  width: 9rem;
+}
+
+table.schedule td.responsible {
+  width: 16rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+table.schedule tr.break td {
+  background: rgba(13,33,55,0.04);
+  font-style: italic;
+  color: var(--muted);
+}
+
+table.schedule tr.day-header td {
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Attendees table ------------------------------------- */
+/*
+ * EDITING THIS TABLE VIA PULL REQUEST:
+ * Each row is one participant. Add/modify rows in <tbody>.
+ * Do NOT change the <thead> structure.
+ */
+table.attendees {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.93rem;
+}
+
+table.attendees th,
+table.attendees td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+table.attendees tr:last-child td  { border-bottom: none; }
+table.attendees tbody tr:nth-child(even) td { background: rgba(243,246,251,0.6); }
+
+table.attendees thead tr {
+  background: var(--primary);
+  color: #fff;
+}
+
+table.attendees thead th {
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ---- Meals / dietary table ------------------------------- */
+/*
+ * EDITING THIS TABLE VIA PULL REQUEST:
+ * To register your dietary information, add or edit your row in <tbody>.
+ * Leave cells blank if not applicable. Use "none" for no restrictions.
+ */
+table.meals {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.93rem;
+}
+
+table.meals th,
+table.meals td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+table.meals tr:last-child td { border-bottom: none; }
+table.meals tbody tr:nth-child(even) td { background: rgba(243,246,251,0.6); }
+
+table.meals thead tr {
+  background: var(--primary);
+  color: #fff;
+}
+
+table.meals thead th {
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ---- Social activity table ------------------------------- */
+table.social-activity {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.93rem;
+}
+
+table.social-activity th,
+table.social-activity td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+table.social-activity tr:last-child td { border-bottom: none; }
+table.social-activity tbody tr:nth-child(even) td { background: rgba(243,246,251,0.6); }
+
+table.social-activity thead tr {
+  background: var(--primary);
+  color: #fff;
+}
+
+table.social-activity thead th {
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ---- Map embed ------------------------------------------- */
+.map-embed {
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  display: block;
+}
+
+/* ---- Page/section banner --------------------------------- */
+.page-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a456b 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+}
+
+.page-banner-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.page-banner h1 {
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.page-banner p {
+  margin: 0;
+  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+  max-width: 70ch;
+}
+
+.page-banner .breadcrumb {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.8rem;
+}
+
+.page-banner .breadcrumb a { color: rgba(255,255,255,0.75); }
+.page-banner .breadcrumb a:hover { color: #fff; }
+
+/* ---- Footer ---------------------------------------------- */
+footer {
+  background: var(--primary);
+  color: rgba(255,255,255,0.65);
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-inner p { margin: 0.3rem 0; font-size: 0.88rem; }
+.footer-inner a { color: rgba(255,255,255,0.8); }
+.footer-inner a:hover { color: #fff; }
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-logos img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+/* ---- Responsive ------------------------------------------ */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-logos { justify-content: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .header-event { text-align: left; }
+  .nav-inner a { padding: 0.6rem 0.8rem; font-size: 0.88rem; }
+  table.schedule td.responsible { width: auto; }
+  table.schedule, table.attendees, table.meals, table.social-activity {
+    display: block; overflow-x: auto;
+  }
+}
